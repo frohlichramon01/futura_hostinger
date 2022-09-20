@@ -1,0 +1,99 @@
+{% include 'seguros/partials/head.html' %}
+{% load static %}
+
+
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="{% static 'seguros/assets/fonts/icomoon/style.css'%}">
+	<link rel="stylesheet" href="{% static 'seguros/assets/css/owl.carousel.min.css'%}">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{% static 'seguros/assets/css/bootstrap.min.css'%}">
+
+	<!-- Style -->
+	<link rel="stylesheet" href="{% static 'seguros/assets/css/style1.css'%}">
+	<title>FUTURA DIGITAL - Seguro Residencial</title>
+</head>
+
+<body>
+	<div class="site-mobile-menu site-navbar-target">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close mt-3">
+				<span class="icon-close2 js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
+
+	<header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+		{% include 'seguros/partials/menu.html' %}
+	</header>
+
+	<!-- Início da Tela principal -->
+	<div class="container telaprincipal">
+		<div class="titulo">
+			<h1 id="titulo" style="text-align:center">Seguro residencial</h1>
+			<div class="descricaoseguro">
+				<div>
+					<div style="float: left">
+						<img src="https://loremflickr.com/320/240" />
+					</div>
+					<div class="container">
+						<p>Nosso lar reflete a nossa personalidade. 
+                            Cuidar do lugar em que você mora é se 
+                            cuidar de si mesmo. Faça do seu lar um 
+                            local seguro, no qual você possa ser 
+                            você mesmo, sem se preocupar com o inesperado.</p>
+                            <br>
+                            <h4>Preencha os dados abaixo, para que um dos nossos corretores entre em contato:</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div style="display:flex">
+			<div class="container formularioseguro">
+				<form method="post" action="">{% csrf_token %}
+					<div class="form-group">
+						<div class="form-row mb-3">
+							<input id="nome" type="text" name="nome" class="form-control" placeholder="Nome completo" required />
+						</div>
+						<div class="form-row mb-3">
+							<input id="telefone" type="tel" name="telefone" class="form-control" placeholder="Telefone" required />
+						</div>
+						<div class="form-row mb-3">
+							<input id="email" type="email" name="email" class="form-control" placeholder="Email" />
+						</div>
+					</div>
+
+					<div class="form-row">
+						<textarea name="mensagem" class="form-control" rows="5" placeholder="Observações"></textarea>
+					</div>
+					<br>
+					{{form.captcha}}
+					{% include 'seguros/partials/message.html' %}
+
+					<button type="submit" value="Submit" class="btn btn-primary">Enviar!</button>
+				</form>
+			</div>
+
+		</div>
+	</div>
+	<!-- Fim da Tela principal -->
+
+
+	<script src="{% static 'seguros/assets/js/jquery-3.3.1.min.js'%}"></script>
+	<script src="{% static 'seguros/assets/js/popper.min.js'%}"></script>
+	<script src="{% static 'seguros/assets/js/bootstrap.min.js'%}"></script>
+	<script src="{% static 'seguros/assets/js/jquery.sticky.js'%}"></script>
+	<script src="{% static 'seguros/assets/js/main1.js'%}"></script>
+
+	
+</body>
+
+</html>
+

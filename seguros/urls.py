@@ -1,9 +1,14 @@
 from django.urls import path
 
-from seguros.views import contato, home, sobre
+from . import views
 
 urlpatterns = [
-    path('', home),
-    path('sobre/', sobre),
-    path('contato/',contato),
+    path('', views.home, name="home"),
+    path('auto/', views.auto, name="auto"),
+    path('vida/', views.vida, name="vida"),
+    path('casa/', views.casa, name="casa"),
+    path('empresa/', views.empresa, name="empresa"),
+    path('viagem/', views.viagem, name="viagem"),
+    path('sobre/', views.sobre, name="sobre"),
+    path('contato/', views.contato, name="contato"),
 ]
