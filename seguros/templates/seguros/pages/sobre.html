@@ -1,17 +1,40 @@
-{% include 'seguros/partials/head.html' %}
 {% load static %}
+{% include 'seguros/partials/head.html' %}
+
+
+	<title>Sobre nós | FUTURA DIGITAL</title>
+</head>
 
 <body>
-    {% include 'seguros/partials/menu.html' %}
-    <div class="container">
-    <p>Sobre nós
-    </p>
-    </div>
+	{% include 'seguros/partials/menu.html' %}
+	
+	<!-- Início da Tela principal -->
+	<div class="container  p-5">
+		<div class="titulo">
+			<h1 id="titulo" style="text-align:center">Sobre a FUTURA DIGITAL</h1>
+			<div class="">
+				<div>
+					<div class="" style="float: left; padding-right: 20px">
+						<img src="{% static 'seguros/images/gelo.jpg' %}" style="width: 320px"/>
+					</div>
+					<div class="container">
+						<p>A FUTURA DIGITAL nasceu de uma antiga empresa familiar, criada pelo meu pai, Sr. Izair.
+                            Com a digitalização dos serviços, foi necessário se adaptar, por isso estamos 100% conectados.
+                            Qualquer dúvida, não hesite em nos contatar!</p>
+                        <br>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+	</div>
+	<br><br>
+	<!-- Fim da Tela principal -->
+	
+	{% include 'seguros/partials/scripts.html' %}
 </body>
 
 {% include 'seguros/partials/footer.html' %}
-
-
-
-
 </html>
+

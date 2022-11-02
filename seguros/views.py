@@ -8,7 +8,17 @@ from .forms import (ContatoForm, SeguroAutoForm, SeguroCasaForm,
 # Create your views here.
 
 def home(request):
-    return render(request, 'seguros/pages/home.html')
+    if request.method == "POST":
+        form = ContatoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, "Dados enviados com sucesso. Aguarde que entraremos em contato!")
+            return render(request, 'seguros/pages/home.html', {'form':ContatoForm})
+        else:
+            messages.error(request, "Dados ou verificação incorretos.")
+            return render(request, 'seguros/pages/home.html', {'form':ContatoForm})
+                
+    else:return render(request, 'seguros/pages/home.html', {'form':ContatoForm})
 
 def sobre(request):
     return render(request, 'seguros/pages/sobre.html')
@@ -64,19 +74,6 @@ def empresa(request):
             return render(request, 'seguros/pages/empresa.html', {'form':SeguroEmpresaForm})
                 
     else:return render(request, 'seguros/pages/empresa.html', {'form':SeguroEmpresaForm})
-
-def contato(request):
-    if request.method == "POST":
-        form = ContatoForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, "Dados enviados com sucesso. Aguarde que entraremos em contato!")
-            return render(request, 'seguros/pages/contato.html', {'form':ContatoForm})
-        else:
-            messages.error(request, "Dados ou verificação incorretos.")
-            return render(request, 'seguros/pages/contato.html', {'form':ContatoForm})
-                
-    else:return render(request, 'seguros/pages/contato.html', {'form':ContatoForm})
 
 def viagem(request):
     if request.method == "POST":

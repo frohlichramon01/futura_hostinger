@@ -1,216 +1,174 @@
-{% include 'seguros/partials/head.html' %}
 {% load static %}
+{% include 'seguros/partials/head.html' %}
 
-<head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-	<link rel="stylesheet" href="{% static 'seguros/assets/fonts/icomoon/style.css'%}">
-	<link rel="stylesheet" href="{% static 'seguros/assets/css/owl.carousel.min.css'%}">
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="{% static 'seguros/assets/css/bootstrap.min.css'%}">
-
-	<!-- Style -->
-	<link rel="stylesheet" href="{% static 'seguros/assets/css/style1.css'%}">
-	<title>FUTURA DIGITAL - Seguro Viagem Nacional</title>
+	<title>Home | FUTURA DIGITAL</title>
 </head>
 
-<body>
-	<div class="site-mobile-menu site-navbar-target">
-		<div class="site-mobile-menu-header">
-			<div class="site-mobile-menu-close mt-3">
-				<span class="icon-close2 js-menu-toggle"></span>
-			</div>
-		</div>
-		<div class="site-mobile-menu-body"></div>
-	</div>
+<body class="blackbody">
+    {% include 'seguros/partials/message.html' %}
+	<section class="hidden">
+        <div class="container borda">
+            <br>
+            <div class="container">
+                <img src="{% static 'seguros/images/futura-logo.png' %}" 
+                class="imagem" width="70%" alt="Logomarca Futura Digital Seguros">
+            </div>
+            <div class="container">
+                <br><br><br><br>
+                <div class="container">
+                    <h5>A <strong>FUTURA DIGITAL Seguros</strong> trabalha com as maiores seguradoras do mercado brasileiro, atuando nos ramos de Automóvel, Vida, Residencial, Empresarial e Viagem.</h5>
+                <br><br><br><br>
+                </div>
+            </div>
+            <br>
+        </div>
+    </section>
 
-	{% include 'seguros/partials/menu.html' %}
+    <section class="hidden">
+        <a href="../auto" class="semlink">
+            <div class="container borda p-5">
+                <h1>Seguro Veicular</h1>
+                <br>
+                <div class="imagemdiv">
+                    <img src="{% static 'seguros/images/image_auto.jpg' %}">
+                </div>
+                <br>
+                <h5>Um Seguro veicular adaptado às suas necessidades. 
+                    Em tempos de estresse e vida agitada, 
+                    ficar tranquilo em relação ao nosso veículo 
+                    é o que todos queremos. 
+                    Seu carro protegido e garantido, esse é o nosso objetivo.</h5>
+                    <br>
+                <button type="button" class="btn btn-primary btn-lg">Cote aqui seu Seguro Veicular</button>
+                
+            </div>
+            
+        </a>
+    </section>
 
-	<!-- Início da Tela principal
-	<div class="container telaprincipal">
-		<div class="titulo">
-			<h1 id="titulo" style="text-align:center">Seguro Viagem</h1>
-			<div class="descricaoseguro">
-				<div>
-					<div style="float: left">
-						<img src="https://loremflickr.com/320/240" />
-					</div>
-					<div class="container">
-						<p>O seguro de quem quer se livrar das preocupações e 
-							só aproveitar. A novidade pode trazer alguns riscos 
-							inesperados. Por isso, queremos que a sua energia 
-							seja gasta naquilo que realmente importe. 
-							Aproveite sua estadia enquanto cuidamos da sua segurança.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="titulo" style="padding:10px 0px 0px 50px">
-			<h4>Preencha os dados abaixo, para que um dos nossos corretores entre em contato:</h4>
-		</div>
+    <section class="hidden">
+        <a href="../casa" class="semlink">
+            <div class="container borda p-5">
+                <h1>Seguro Residencial</h1>
+                <br>
+                <div class="imagemdiv">
+                    <img src="{% static 'seguros/images/image_residencial.jpg' %}">
+                </div>
+                <br>
+                <h5>Nosso lar reflete a nossa personalidade. 
+                    Cuidar do lugar em que você mora é se 
+                    cuidar de si mesmo. Faça do seu lar um 
+                    local seguro, no qual você possa ser 
+                    você mesmo, sem se preocupar com o inesperado.</h5>
+                    <br>
+                    <button type="button" class="btn btn-primary btn-lg">Cote aqui seu Seguro Residencial</button>
+                    
+                </div>
+        </a>
+    </section>
 
+    <section class="hidden">
+        <a href="../empresa" class="semlink">
+            <div class="container borda p-5">
+                <h1>Seguro Empresarial</h1>
+                <br>
+                <div class="imagemdiv">
+                    <img src="{% static 'seguros/images/image_empresarial.jpg' %}">
+                </div>
+                <br>
+                <h5>Sua empresa focando a energia e os recursos no que realmente importa. 
+                    Gere valor protegido contra o caos e o inesperado. 
+                    Aqueles que cuidam do que têm podem assumir mais riscos.</h5>
+                    <br>
+                    <button type="button" class="btn btn-primary btn-lg">Cote aqui seu Seguro Empresarial</button>
+                    
+                </div>
+        </a>
+    </section>
 
+    <section class="hidden">
+        <a href="../viagem" class="semlink">
+            <div class="container borda p-5">
+                <h1>Seguro Viagem</h1>
+                <br>
+                <div class="imagemdiv">
+                    <img src="{% static 'seguros/images/image_viagem1.jpg' %}">
+                </div>
+                <br>
+                <h5>O seguro de quem quer se livrar das preocupações e só aproveitar. 
+                    A novidade pode trazer alguns riscos inesperados. 
+                    Por isso, queremos que a sua energia seja gasta naquilo que realmente importe. 
+                    Aproveite sua estadia enquanto cuidamos da sua segurança.</h5>
+                    <br>
+                    <button type="button" class="btn btn-primary btn-lg">Cote aqui seu Seguro Viagem</button>
+                    
+                </div>
+        </a>
+    </section>
 
+    <section class="hidden">
+        <a href="../vida" class="semlink">
+            <div class="container borda p-5">
+                <h1>Seguro de Vida</h1>
+                <br>
+                    <div class="imagemdiv">
+                        <img src="{% static 'seguros/images/image_vida.jpg' %}">
+                    </div>
+                <br>
+                <h5>O seguro daqueles que querem o bem das pessoas ao seu redor. 
+                    Proteja os seus familiares e as pessoas que você ama. 
+                    Garanta um futuro de segurança financeira e estabilidade.</h5>
+                    <br>
+                    <button type="button" class="btn btn-primary btn-lg">Cote aqui seu Seguro de Vida</button>
+                    
+                </div>
+        </a>
+    </section><br><br><br>
 
-		<div style="display:flex">
-			<div class="container formularioseguro">
-				<form method="post" action="">{% csrf_token %}
-					<div class="form-group">
-						<div class="form-row mb-3">
-							<input id="nome" type="text" name="nome" class="form-control" placeholder="Nome completo" required />
-						</div>
-						<div class="form-row mb-3">
-							<input id="telefone" type="tel" name="telefone" class="form-control" placeholder="Telefone" required />
-						</div>
-						<div class="form-row mb-3">
-							<input id="email" type="email" name="email" class="form-control" placeholder="Email" />
-						</div>
+    <section class="hidden" id="sectioncontato">
+        <div class="container borda p-5">
+                <br>
+                    <h1 id="titulo" style="text-align:center">Fale conosco</h1>
+                    <br>
+                    <div class="container">
+                            <div class="imagemdiv">
+                                <img src="{% static 'seguros/images/contato.jpg' %}">
+                            </div>
+                            <div class="container">
+                                <br><br>
+                                <h4>Deixe sua dúvida, elogio ou sugestão, que em breve retornaremos o contato.</h4>
+                            </div>
+                            <br>
+                            <div class="container p-5">
+                            <form method="post" action="">{% csrf_token %}
+                                <div class="form-group">
+                                    <div class="form-row mb-3">
+                                        <input id="nome" type="text" name="nome" class="form-control" placeholder="Nome completo" required />
+                                    </div>
+                                    <div class="form-row mb-3">
+                                        <input id="telefone" type="tel" name="telefone" class="form-control" placeholder="Telefone" required />
+                                    </div>
+                                    <div class="form-row mb-3">
+                                        <input id="email" type="email" name="email" class="form-control" placeholder="Email" />
+                                    </div>
+                                </div>
+            
+                                <div class="form-row">
+                                    <textarea name="mensagem" class="form-control" rows="5" placeholder="Observações"></textarea>
+                                </div>
+                                <br>
+                                {{form.captcha}}
+                                
+            
+                                <button type="submit" value="Submit" class="btn btn-primary">Enviar!</button>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+    </section>
 
-						<div class="form-row mb-3">
-							<select class="custom-select" name="tipo_viagem" required onChange="update()">
-								<option value="">Selecione o tipo de viagem</option>
-								<option value="nacional">Nacional</option>
-								<option value="internacional">Internacional</option>
-							</select>
-						</div>
-
-
-
-						<div class="row">
-							<div class="col">
-								<div class="input-group mb-3">
-									<div class="input-group-prepend">
-										<label class="input-group-text" for="origem">Origem</label>
-									</div>
-									<select class="custom-select" name="origem" required>
-										<option value="selecione">Selecione o tipo de viagem</option>
-										<option value="selecione">Selecione o tipo de viagem</option>
-									</select>
-								</div>
-
-
-							</div>
-							<div class="col">
-								<div class="input-group mb-3">
-									<div class="input-group-prepend">
-										<label class="input-group-text" for="destino">Destino</label>
-									</div>
-									<select class="custom-select" name="destino" required>
-										<option value="selecione">Selecione o tipo de viagem</option>
-										<option value="selecione">Selecione o tipo de viagem</option>
-									</select>
-								</div>
-							</div>
-						</div>
-
-
-						<div class="row">
-							<div class="col">
-								<div class="input-group mb-3">
-									<div class="input-group-prepend">
-										<label class="input-group-text" for="inputGroupSelect01">Meio de
-											transporte</label>
-									</div>
-									<select class="custom-select" name="meio_transporte" id="inputGroupSelect01" required>
-										<option value="">Selecione</option>
-										<option value="aereo">Aéreo</option>
-										<option value="maritimo">Marítimo</option>
-										<option value="aereomaritimo">Aéreo + Marítimo</option>
-									</select>
-								</div>
-							</div>
-							<div class="col">
-
-								<div class="input-group mb-3">
-									<div class="input-group-prepend">
-										<label class="input-group-text" for="inputGroupSelect01">Motivo da
-											viagem</label>
-									</div>
-									<select class="custom-select" name="motivo_viagem" id="inputGroupSelect01" required>
-										<option value="">Selecione</option>
-										<option value="lazer">Lazer</option>
-										<option value="estudo">Estudo</option>
-										<option value="negocios">Negócios</option>
-									</select>
-								</div>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col">
-								<div class="input-group mb-3">
-									<div class="input-group-prepend">
-										<label class="input-group-text" for="inputGroupSelect01">Data de
-											ida</label>
-									</div>
-									<input type="date" id="data_ida" name="data_ida" required>
-								</div>
-							</div>
-							<div class="col">
-								<div class="input-group mb-3">
-									<div class="input-group-prepend">
-										<label class="input-group-text" for="inputGroupSelect01">Data de
-											volta</label>
-									</div>
-									<input type="date" id="data_volta" name="data_volta" required>
-								</div>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col">
-								<div class="input-group mb-3">
-									<div class="input-group-prepend">
-										<label class="input-group-text" for="inputGroupSelect01">Viajantes
-											com até
-											64
-											anos</label>
-									</div>
-									<input class="quantity" name="viajantes_ate_64" id="id_form-0-quantity" min="0" name="form-0-quantity"
-										value="" type="number" style="width:50px" required>
-								</div>
-							</div>
-							<div class="col">
-								<div class="input-group mb-3">
-									<div class="input-group-prepend">
-										<label class="input-group-text" for="inputGroupSelect01">Viajantes
-											com 65
-											anos
-											ou
-											mais</label>
-									</div>
-									<input class="quantity" name="viajantes_65_mais" id="id_form-0-quantity" min="0" name="form-0-quantity"
-										value="" type="number" style="width:50px" required>
-								</div>
-							</div>
-						</div>
-
-					</div>
-
-					<div class="form-row">
-						<textarea name="mensagem" class="form-control" rows="5" placeholder="Observações"></textarea>
-					</div>
-					<br>
-					{{form.captcha_viagem}}
-
-					<button type="submit" value="Submit" class="btn btn-primary">Enviar!</button>
-				</form>
-			</div>
-
-		</div>
-	</div> Fim da Tela principal -->
-
-
-	<script src="{% static 'seguros/assets/js/jquery-3.3.1.min.js'%}"></script>
-	<script src="{% static 'seguros/assets/js/popper.min.js'%}"></script>
-	<script src="{% static 'seguros/assets/js/bootstrap.min.js'%}"></script>
-	<script src="{% static 'seguros/assets/js/jquery.sticky.js'%}"></script>
-	<script src="{% static 'seguros/assets/js/main1.js'%}"></script>
-
+	{% include 'seguros/partials/scripts.html' %}
 </body>
 
 </html>
-

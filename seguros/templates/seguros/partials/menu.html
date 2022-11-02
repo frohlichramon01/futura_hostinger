@@ -1,42 +1,42 @@
 {% load static %}
 
 
-<header class="site-navbar js-sticky-header site-navbar-target" role="banner">
-    <!-- Início Menu -->
-    <div class="container">
-        <div class="row align-items-center position-relative">
+<header>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-5">
+    <img src="{% static 'seguros/images/futura-logo.png' %}" class="imagem" width="15%" alt="Logomarca Futura Digital Seguros">
 
-            <div class="site-logo">
-                <a href="/" class="text-black"><span class="text-primary">FUTURA Seguros</a>
-            </div>
-
-            <div class="col-12">
-                <nav class="site-navigation text-right ml-auto " role="navigation">
-
-                    <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
-                        <li><a href="/" class="nav-link">Home</a></li>
-                        <li class="has-children">
-                            <a href="#" class="nav-link">Seguros</a>
-                            <ul class="dropdown arrow-top">
-                                <li><a href="../auto" class="nav-link">Automóveis</a></li>
-                                <li><a href="../empresa" class="nav-link">Empresarial</a></li>
-                                <li><a href="../casa" class="nav-link">Residencial</a></li>
-                                <li><a href="../viagem" class="nav-link">Viagem</a></li>
-                                <li><a href="../vida" class="nav-link">Vida</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="../sobre" class="nav-link">Sobre nós</a></li>
-                        <li><a href="../contato" class="nav-link">Contato</a></li>
-                    </ul>
-                </nav>
-
-            </div>
-            <!-- Botão para o mobile -->
-            <div class="toggle-button d-inline-block d-lg-none"><a href="#"
-                    class="site-menu-toggle py-5 js-menu-toggle text-black"><span class="icon-menu h3"></span></a>
-            </div>
-            <!-- Final do botão para o mobile -->
-        </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="../">Início</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="../auto">Automotivo</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="../casa">Residencial</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="../empresa">Empresarial</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="../viagem">Viagem</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="../vida">Vida</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="../sobre">Sobre nós</a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="../#sectioncontato">Contato</a>
+        </li>
+      </ul>
     </div>
-    <!-- Fim Menu -->
+  </nav>
 </header>
+<br>

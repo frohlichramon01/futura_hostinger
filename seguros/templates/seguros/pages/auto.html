@@ -1,46 +1,21 @@
-{% include 'seguros/partials/head.html' %}
 {% load static %}
+{% include 'seguros/partials/head.html' %}
 
 
-
-<head>
-	<!-- Required meta tags -->
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-	<link rel="stylesheet" href="{% static 'seguros/assets/fonts/icomoon/style.css'%}">
-	<link rel="stylesheet" href="{% static 'seguros/assets/css/owl.carousel.min.css'%}">
-
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="{% static 'seguros/assets/css/bootstrap.min.css'%}">
-
-	<!-- Style -->
-	<link rel="stylesheet" href="{% static 'seguros/assets/css/style1.css'%}">
-	<title>FUTURA DIGITAL - Seguro Auto</title>
+	<title>Seguro Veicular | FUTURA DIGITAL</title>
 </head>
 
 <body>
-	<div class="site-mobile-menu site-navbar-target">
-		<div class="site-mobile-menu-header">
-			<div class="site-mobile-menu-close mt-3">
-				<span class="icon-close2 js-menu-toggle"></span>
-			</div>
-		</div>
-		<div class="site-mobile-menu-body"></div>
-	</div>
-
-	<header class="site-navbar js-sticky-header site-navbar-target" role="banner">
-		{% include 'seguros/partials/menu.html' %}
-	</header>
-
+	{% include 'seguros/partials/menu.html' %}
+	
 	<!-- Início da Tela principal -->
-	<div class="container telaprincipal">
+	<div class="container border border-2 rounded p-5">
 		<div class="titulo">
-			<h1 id="titulo" style="text-align:center">Seguro veicular</h1>
-			<div class="descricaoseguro">
+			<h1 id="titulo" style="text-align:center">Seguro Veicular</h1>
+			<div class="">
 				<div>
-					<div style="float: left">
-						<img src="https://loremflickr.com/320/240" />
+					<div class="" style="float: left; padding-right: 20px">
+						<img src="{% static 'seguros/images/auto.jpg' %}" style="width: 320px"/>
 					</div>
 					<div class="container">
 						<p>Um Seguro veicular adaptado às suas necessidades. 
@@ -83,17 +58,12 @@
 
 		</div>
 	</div>
+	<br><br>
 	<!-- Fim da Tela principal -->
-
-
-	<script src="{% static 'seguros/assets/js/jquery-3.3.1.min.js'%}"></script>
-	<script src="{% static 'seguros/assets/js/popper.min.js'%}"></script>
-	<script src="{% static 'seguros/assets/js/bootstrap.min.js'%}"></script>
-	<script src="{% static 'seguros/assets/js/jquery.sticky.js'%}"></script>
-	<script src="{% static 'seguros/assets/js/main1.js'%}"></script>
-
 	
+	{% include 'seguros/partials/scripts.html' %}
 </body>
 
+{% include 'seguros/partials/footer.html' %}
 </html>
 
