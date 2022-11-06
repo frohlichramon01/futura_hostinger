@@ -10,8 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import json
 import os
 from pathlib import Path
+
+with open('/etc/config.json') as config_file:
+    config = json.load(config_file)
 
 from django.contrib.messages import constants
 
@@ -23,18 +27,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('SECRET_KEY', 'INSECURE')
+SECRET_KEY = config['SECRET_KEY']
 
 # captcha stuff
-RECAPTCHA_PUBLIC_KEY = '6LfJCrMhAAAAAGWIn2NVWf3pCqDVIhY3Jw6xdvyd'
-RECAPTCHA_PRIVATE_KEY = '6LfJCrMhAAAAAB9SinL1uoAOkfUtyUnU8qSuYSr3'
+RECAPTCHA_PUBLIC_KEY = config['RECAPTCHA_PUBLIC_KEY']
+RECAPTCHA_PRIVATE_KEY = config['RECAPTCHA_PRIVATE_KEY']
 SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['191.101.78.130']
 
 
 # Application definition
@@ -128,6 +132,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 STATIC_URL = 'static/'
 
 # Default primary key field type
