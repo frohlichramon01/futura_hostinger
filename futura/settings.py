@@ -38,7 +38,7 @@ SILENCED_SYSTEM_CHECKS = ['captcha.recaptcha_test_key_error']
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['191.101.78.130']
+ALLOWED_HOSTS = ['191.101.78.130', '2a02:4780:13:907:0:1f8a:e11b:1', 'futuraseguros.net', 'www.futuraseguros.net']
 
 
 # Application definition
