@@ -100,12 +100,14 @@ section{
   border-radius: 10px;
 }
 
-.imagem {
+.imagemmenu {
   padding: 20px;
 }
 
-.footer {
-  background-color: rgba(19, 205, 211, 0.5);
+@media (max-width: 700px){
+	.imagemmenu{
+		width: 80%; 
+	}
 }
 
 .semlink{
@@ -125,4 +127,24 @@ section{
   overflow: hidden;
   opacity: 0.5;
   border-radius: 10px;
+}
+
+.imagempaginas{
+	float: left;
+	padding-right:20px;
+}
+
+@media (max-width: 700px){
+
+	.texto{
+		display: inline-block;
+		text-align:center;
+	}
+
+	.imagempaginas{
+		text-align: center;
+		float: none;
+		padding-right:0px;
+		padding-bottom: 15px;
+	}
 }

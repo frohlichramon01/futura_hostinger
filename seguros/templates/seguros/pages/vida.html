@@ -5,29 +5,29 @@
 	<title>Seguro de Vida | FUTURA DIGITAL</title>
 </head>
 
-<body>
+<body class="blackbody">
 	{% include 'seguros/partials/menu.html' %}
 	
 	<!-- Início da Tela principal -->
-	<div class="container border border-2 rounded p-5">
+	<div class="container border border-2 rounded p-5" style="background-color:white; color: black;">
 		<div class="titulo">
 			<h1 id="titulo" style="text-align:center">Seguro de Vida</h1>
 			<div class="">
 				<div>
-					<div class="" style="float: left; padding-right: 20px">
+					<div class="imagempaginas">
 						<img src="{% static 'seguros/images/vida.jpg' %}" style="width: 320px"/>
 					</div>
-					<div class="container">
+					<div class="container texto">
 						<p>Esse é o seguro para cuidar de quem amamos. Proteja os seus familiares e as pessoas que você ama. Garanta um futuro de segurança financeira e estabilidade.</p>
                             <br>
-                            <h4>Preencha os dados abaixo, para que um dos nossos corretores entre em contato:</h4>
+                            <h4>Preencha os dados abaixo, para que um dos nossos corretores apresente a Cotação Gratuita:</h4>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<div style="display:flex">
-			<div class="container formularioseguro">
+			<div class="container formularioseguro" style="padding-left: 0px;">
 				<form method="post" action="">{% csrf_token %}
 					<div class="form-group">
 						<div class="form-row mb-3">
@@ -48,7 +48,7 @@
 					{{form.captcha}}
 					{% include 'seguros/partials/message.html' %}
 
-					<button type="submit" value="Submit" class="btn btn-primary">Enviar!</button>
+					<br><button type="submit" value="Submit" class="btn btn-primary">Faça a sua cotação GRATUITA aqui!</button>
 				</form>
 			</div>
 

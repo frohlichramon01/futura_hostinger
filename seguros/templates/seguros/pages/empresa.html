@@ -5,29 +5,29 @@
 	<title>Seguro Empresarial | FUTURA DIGITAL</title>
 </head>
 
-<body>
+<body class="blackbody">
 	{% include 'seguros/partials/menu.html' %}
 	
 	<!-- Início da Tela principal -->
-	<div class="container border border-2 rounded p-5">
+	<div class="container border border-2 rounded p-5" style="background-color: white; color:black;">
 		<div class="titulo">
 			<h1 id="titulo" style="text-align:center">Seguro Empresarial</h1>
 			<div class="">
 				<div>
-					<div class="" style="float: left; padding-right: 20px">
+					<div class="imagempaginas">
 						<img src="{% static 'seguros/images/empresa.jpg' %}" style="width: 320px"/>
 					</div>
-					<div class="container">
+					<div class="container texto">
 						<p>Tranquilidade no trabalho é fundamental. Sua empresa deve investir tempo, energia e recursos no que realmente importa. Proteja a sua empresa. Aqueles que cuidam do que têm podem assumir mais riscos.</p>
                             <br>
-                            <h4>Preencha os dados abaixo, para que um dos nossos corretores entre em contato:</h4>
+                            <h4>Preencha os dados abaixo, para que um dos nossos corretores apresente a Cotação Gratuita:</h4>
 					</div>
 				</div>
 			</div>
 		</div>
 
 		<div style="display:flex">
-			<div class="container formularioseguro">
+			<div class="container formularioseguro" style="padding-left: 0px;">
 				<form method="post" action="">{% csrf_token %}
 					<div class="form-group">
 						<div class="form-row mb-3">
@@ -48,7 +48,7 @@
 					{{form.captcha}}
 					{% include 'seguros/partials/message.html' %}
 
-					<button type="submit" value="Submit" class="btn btn-primary">Enviar!</button>
+					<br><button type="submit" value="Submit" class="btn btn-primary">Faça a sua cotação GRATUITA aqui!</button>
 				</form>
 			</div>
 
